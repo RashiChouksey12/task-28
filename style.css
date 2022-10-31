@@ -1,3 +1,10 @@
+@font-face {
+    font-family: Myriad Pro;
+    src: url(
+    assets/fonts/MYRIADPRO-REGULAR.OTF);
+ }
+ 
+
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +13,7 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
+
  
 }
 
@@ -117,7 +125,7 @@ figure.login-img {
 }
 
 .logo-header {
-    padding: 68px 0 60px 0;
+    padding: 68px 0 59px 0;
 }
 
 .logo-header-content {
@@ -157,7 +165,8 @@ figure.login-img {
     font-size: 13px;
     color: #111111;
     font-weight: 400;
-    font-family: 'Open Sans', sans-serif;}
+    font-family: 'Open Sans', sans-serif;
+}
 
 .shopping-cart {
     display: flex;
@@ -174,7 +183,7 @@ figure.login-img {
     font-size: 15px;
     text-transform: uppercase;
     color: #111111;
-    font-family: "Myriad Pro";
+    font-family:'Myriad Pro';
 }
 
 .cart-content :last-child {
@@ -187,7 +196,7 @@ figure.login-img {
 
 /* nav */
 nav {
-    padding: 19px 0 20px 0;
+    padding: 18px 0 20px 0;
 }
 
 .nav {
@@ -213,28 +222,34 @@ nav {
 .nav>.nav-links ul{
     display: flex;
     font-size: 18px;
-    gap: 30px;
+    gap: 60px;
     list-style: none;
 }
 
-.nav>.nav-links>li {
+.nav>.nav-links>ul li {
     display: inline-block;
     padding: 0px 10px 0px 10px;
     text-decoration: none;
+
  
     cursor: pointer;
 }
 .nav>.nav-links>ul li a{
-    color: #000;
+    color: #000; 
     font-size: 14px;
     line-height: 16px;
     text-transform: uppercase;
     font-weight: 700;
 }
+/* ul li:first-child{
+    color: #cb0d22;
+    background-color: blue;
+} */
 
 .active{
-    color: #cb0d22;
-}
+    color: #cb0d22 !important;
+
+} 
 
 .nav>.nav-links>ul li a:hover {
     color: #cb0d22;
@@ -255,7 +270,7 @@ main {
 
 .main-content {
     width: 50%;
-    padding: 155px 0 230px 37px;
+    padding: 155px 0 230px 0px;
 }
 
 main h1 {
@@ -266,6 +281,7 @@ main h1 {
     color: #232323;
     font-weight: 700;
     font-family: 'Oxygen', sans-serif;
+    padding-left: 37px;
 }
 
 main p {
@@ -274,18 +290,23 @@ main p {
     line-height: 20px;
     color: #232323;
     font-weight: 400;
-    padding: 34px 0 40px 0;
+    padding: 34px 0 41px 37px;
 
 }
 
 main button {
+    font-size: 13px;
+letter-spacing: 0px;
+color: #ffffff;
+font-weight: 700;
+font-family: "Open Sans";
     width: auto;
     padding: 15px 28px;
     background-color: #111111;
-    color: #fff;
     border: none;
     font-family: 'Open Sans', sans-serif;
         cursor: pointer;
+        margin-left: 27px;
 }
 
 
@@ -310,7 +331,7 @@ main button {
 .left-box {
     background-color: #cb0d22;
     position: absolute;
-    top: -82px;
+    top: -81px;
     padding: 109px 0 95px 0;
 
 }
@@ -349,7 +370,7 @@ main button {
     background-color: #ffffff;
     border: 1px solid rgb(156, 156, 156, 0.200);
     width: 19%;
-    padding: 39px 30px;
+    padding: 38px 25px;
 }
 
 .right-box:last-child {
@@ -518,7 +539,7 @@ padding-top: 39px;
     background-position: center;  
 }
     .content {
-        padding: 92px 0 293px 0;
+        padding: 94px 0 293px 0;
         width: 30%;
     }
 
@@ -530,6 +551,8 @@ padding-top: 39px;
     font-family: 'Oxygen', sans-serif;
     display: block;
     text-align: center;
+    text-transform: uppercase;
+    font-style: italic;
 }
 
 .most-populer h1 {
@@ -577,14 +600,16 @@ padding-top: 39px;
     margin: 0 0 0 10px;
 }
 .cards-content p{
-    text-align: center;
+
     font-size: 15px;
 text-transform: uppercase;
 color: #200e09;
 font-weight: 600;
-font-family: "Raleway";
+font-family: 'Raleway', sans-serif;
 text-align: center;
 padding: 30px 0 20px 0;
+
+
 
 }
 .cards-content span{
@@ -593,7 +618,8 @@ padding: 30px 0 20px 0;
 line-height: 18px;
 color: #cb0000;
 font-weight: 600;
-font-family: "Raleway";
+
+font-family: 'Raleway', sans-serif;
 text-align: center;
 display: block;
 }
@@ -612,17 +638,18 @@ section.new-arrival {
 .new-arrival-section  h1 span {
     font-size: 55px;
     line-height: 54px;
-    color: #13110F;
     font-weight: 700;
     font-family: 'Oxygen', sans-serif;
     display: block;
     text-align: center;
+    color: #0f0e0c;
+    font-style: italic;
 }
 
 .new-arrival-section  h1 {
     font-size: 130px;
     line-height: 54px;
-    color: #13110F;
+    color: #0f0e0c;
     font-weight: 400;
     font-family: 'Roboto Slab', serif;}
 
@@ -660,33 +687,34 @@ section.new-arrival {
 /* new section css */
 .store-collection{
     position: relative;
-    margin-top: 415px;
+    margin-top: 420px;
 }
 .new-store-items{
     background-image: url('./assets/imgs/revolt-164_6wVEHfI-unsplash.png');
     background-repeat: no-repeat;
     /* background-size: cover; */
     width: 50%;
-    background-position: bottom right;
+    background-position: bottom left;
 
 }
 
 .new-collection{
     background-image: url('./assets/imgs/averie-woodard-F9OmRNNlnYA-unsplash.png');
     background-repeat: no-repeat;
-    background-position: bottom right;
+    background-position: bottom center;
     width: 50%;
 }
 .new-store-product{
     padding: 180px 0 0 95px;
+   /* padding: 180px 0 0 160px; */
    
 }
 .new-store-product  h2 span {
     font-size: 45px;
     line-height: 54px;
     color: #ffffff;
-    font-family: "Raleway";
-    display: block;
+
+    font-family: 'Raleway', sans-serif;    display: block;
 
 }
 
@@ -710,14 +738,14 @@ width: 18.5%;
 cursor: pointer;
 padding: 13px 0 13px 0;
 border-style: none;
-margin-bottom: 218px;
+margin-bottom: 215px;
 
 }
 
 .arrow{
     background-image: url('./assets/imgs/Layer\ 123\ copy\ 3.png');
     background-repeat: no-repeat;
-    background-position: 76% 50%; 
+    background-position: 78% 53%;
 }
 .store-collection-content {
     display: flex;
@@ -739,19 +767,22 @@ margin-bottom: 218px;
 }
 .latest-news-content p{
   margin: 0 auto;
-  width: 45%;
+  width: 50%;
   padding-bottom: 42px;
   font-size: 15px;
 line-height: 20px;
 color: #3b3b3b;
 font-weight: 400;
-font-family: 'Open Sans', sans-serif;}
+font-family: 'Open Sans', sans-serif;
+}
 .card-details {
     display: flex;
     gap: 20px;
 }
 .news-card-detail{
     border: 1px solid #ebebeb;
+    border-left: none;
+    border-right: none;
 }
 
 .main-card{
@@ -865,11 +896,12 @@ footer {
     color: #ffffff;
     font-weight: 700;
     font-family: 'Roboto Slab', serif;
-    padding: 33px 0 26px 0;
+    /* padding: 33px 0 26px 0; */
 }
 
 .footer-content div {
     /* width: 25%; */
+
 }
 
 .footer-para {
@@ -901,18 +933,22 @@ footer {
     border: 1px solid #aeaeae;
     width: 35px;
     height: 35px;
+    text-align: center;
+    /* margin: 0 auto; */
+    padding: 9px 0;
 
 }
-.social-media-icons ul li:nth-last-of-type(1 ){
+/* .social-media-icons ul li:nth-last-of-type(1 ){
   border-bottom: none;
 }
 .social-media-icons ul li:nth-last-of-type(2){
     border-bottom: none;
-  }
+  } */
 
 .social-media-icons ul li i{
     color: #afafaf;
-    padding: 8px 9px;
+    /* padding: 8px 9px; */
+    
 }
 
 /* .social-media-icons ul li i:last-child{
