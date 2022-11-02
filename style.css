@@ -1,6 +1,9 @@
 @font-face {
     font-family: Myriad Pro;
     src: url(assets/fonts/MYRIADPRO-REGULAR.OTF);
+    src: url(assets/fonts/webfontkit-20221102-065653/myriadpro-regular-webfont.eot);
+    src: url(assets/fonts/webfontkit-20221102-065653/myriadpro-regular-webfont.woff);
+    src: url(assets/fonts/webfontkit-20221102-065653/myriadpro-regular-webfont.woff2);
 }
 
 
@@ -48,7 +51,7 @@ a {
     cursor: pointer;
 }
 
-figure img {
+.topNavIcn img {
     width: auto;
     height: 13px;
     margin-right: 7px;
@@ -86,6 +89,12 @@ figure img {
     text-transform: uppercase;
     font-weight: 400;
 }
+
+.top-header-content li select {
+    border: none;
+    background: transparent;
+}
+
 
 .login {
     flex: 1;
@@ -158,7 +167,8 @@ figure.login-img {
     width: 248px;
     font-family: 'Open Sans', sans-serif;
     border: 2px solid #d2d4d2;
-    border-bottom: none;
+    cursor: pointer;
+
 }
 
 .right-section input::placeholder {
@@ -177,6 +187,7 @@ figure.login-img {
 .cart-img {
     margin: 0px 15px 0 0px;
     width: 32px;
+    cursor: pointer;
 }
 
 .cart-content :first-child {
@@ -222,13 +233,12 @@ nav {
 .nav>.nav-links ul {
     display: flex;
     font-size: 18px;
-    gap: 60px;
+    gap: 58px;
     list-style: none;
 }
 
 .nav>.nav-links>ul li {
     display: inline-block;
-    padding: 0px 10px 0px 10px;
     text-decoration: none;
 
 
@@ -264,9 +274,9 @@ nav {
 /* banner */
 
 main {
-    background-image: url('./assets/imgs/daniel-storek-JM-qKEd1GMI-unsplash.png');
+    background-image: url('./assets/imgs/sliderBanner.png');
     background-repeat: no-repeat;
-    background-position: 100% 25%;
+    background-position: 38% 25%;
 
 }
 
@@ -292,25 +302,64 @@ main p {
     line-height: 20px;
     color: #232323;
     font-weight: 400;
-    padding: 34px 0 41px 37px;
+    padding: 34px 0 41px 28px;
 
 }
 
 main button {
-    font-size: 13px;
-    letter-spacing: 0px;
-    color: #ffffff;
-    font-weight: 700;
-    font-family: "Open Sans";
+
+
     width: auto;
     padding: 15px 28px;
     background-color: #111111;
     border: none;
-    font-family: 'Open Sans', sans-serif;
     cursor: pointer;
     margin-left: 27px;
 }
 
+main button a {
+    color: #ffffff;
+    font-size: 13px;
+    letter-spacing: 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+.main-div {
+    position: relative;
+}
+
+.checks {
+    display: flex;
+}
+
+.btn-1 {
+    position: absolute;
+    top: 319px;
+    left: 40px;
+    cursor: pointer;
+}
+
+.btn-2 .right-btn {
+    top: 319px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.right-btn {
+
+
+    border: 3px solid #ffffff;
+    right: 40px;
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    padding: 9px 0 0 0;
+}
+
+.right-btn i {
+    color: rgba(255, 255, 255, 0.800);
+}
 
 
 /* classified category */
@@ -335,6 +384,7 @@ main button {
     position: absolute;
     top: -81px;
     padding: 109px 0 95px 0;
+    cursor: pointer;
 
 }
 
@@ -364,21 +414,23 @@ main button {
     gap: 10px;
     width: 76%;
     padding: 20px 0;
+    text-align: center;
+    margin: 0 auto;
 }
 
+
 .right-box {
-   
+
     background-color: #ffffff;
     border: 1px solid rgb(156, 156, 156, 0.200);
     width: 19%;
-    padding: 38px 25px;
+    padding: 38px 12.5px 38px 12.5px;
 }
 
 .right-box:last-child {
     background-color: #2f2d41;
-
-
     line-height: none;
+
 }
 
 .right-box .forma {
@@ -394,7 +446,7 @@ main button {
     width: auto;
 }
 
-.forma p {
+figcaption {
     font-size: 14px;
     line-height: 20px;
     text-transform: uppercase;
@@ -409,17 +461,18 @@ main button {
     text-transform: uppercase;
     color: #ffffff;
     font-family: "Myriad Pro";
-    text-align: center;
-    text-align: center;
+    cursor: pointer;
     padding: 54px 0;
-    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
 
 }
 
 
 /* most-populer */
 .most-populer {
-    background-image: url('./assets/imgs/omar-prestwich-jLEGurepDco-unsplash.png');
+    background-image: url('./assets/imgs/omar.png');
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -431,7 +484,7 @@ main button {
     width: 30%;
 }
 
-.most-populer h1 span {
+.most-populer h2 span {
     font-size: 55px;
     line-height: 54px;
     color: #ffffff;
@@ -443,7 +496,7 @@ main button {
     font-style: italic;
 }
 
-.most-populer h1 {
+.most-populer h2 {
     font-size: 130px;
     line-height: 54px;
     color: #ffffff;
@@ -455,45 +508,26 @@ main button {
     position: relative;
 }
 
-.card-img:nth-child(1) {
-    background-image: url('./assets/imgs/shoes.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 384px;
+.card-img {
+    width: 275px;
+    height: auto;
 }
-
-.card-img-2 {
-    background-image: url('./assets/imgs/solesavy-LgzM6R0ojoE-unsplash.png');
-    background-repeat: no-repeat;
-    background-position-y: -18px;
-    background-position-x: -171px;
-    height: 384px;
-}
-
-.card-img-3 {
-    background-image: url('./assets/imgs/ryan-plomp-jvoZ-Aux9aw-unsplash.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 384px;
-}
-
 .cards-items {
     display: flex;
-    width: 100%;
     position: absolute;
     top: -165px;
     background: #fff;
-    padding: 10px 10px 90px 0;
+    padding: 10px 15px 90px 15px;
+    gap: 15px;
+
 }
 
 .cards-content {
     width: 25%;
-    margin: 0 0 0 10px;
+
 }
 
-.cards-content p {
+.card-content {
 
     font-size: 15px;
     text-transform: uppercase;
@@ -507,7 +541,7 @@ main button {
 
 }
 
-.cards-content span {
+.card-ammount {
 
     font-size: 22px;
     line-height: 18px;
@@ -530,10 +564,10 @@ section.new-arrival {
     width: 30%;
 }
 
-.new-arrival-section h1 span {
+.new-arrival-section h2 span {
     font-size: 55px;
     line-height: 42px;
-        font-weight: 700;
+    font-weight: 700;
     font-family: 'Oxygen', sans-serif;
     display: block;
     text-align: center;
@@ -542,7 +576,7 @@ section.new-arrival {
     margin-right: 30px;
 }
 
-.new-arrival-section h1 {
+.new-arrival-section h2 {
     font-size: 130px;
     line-height: 54px;
     color: #0f0e0c;
@@ -550,39 +584,7 @@ section.new-arrival {
     font-family: 'Roboto Slab', serif;
 }
 
-.card-img-arrival1 {
-    background-image: url('./assets/imgs/laura-chouette-r1vE_DN9n_I-unsplash.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-position-x: -43px;
-    height: 384px;
-}
 
-.card-img-arrival2 {
-    background-image: url('./assets/imgs/leisara-creative-studio-Kdmnr-clXpg-unsplash.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 384px;
-}
-
-.card-img-arrival3 {
-    background-image: url('./assets/imgs/pexels-moose-photos-1038000.png');
-    background-repeat: no-repeat;
-
-    background-position: bottom right;
-    background-position-x: 77%;
-
-    height: 384px;
-}
-
-.card-img-arrival4 {
-    background-image: url('./assets/imgs/Layer\ 204.png');
-    background-repeat: no-repeat;
-    background-position: bottom right;
-    background-position-x: 28%;
-    height: 384px;
-}
 
 /* new section css */
 .store-collection {
@@ -591,7 +593,7 @@ section.new-arrival {
 }
 
 .new-store-items {
-    background-image: url('./assets/imgs/revolt-164_6wVEHfI-unsplash.png');
+    background-image: url('./assets/imgs/revolt.png');
     background-repeat: no-repeat;
     /* background-size: cover; */
     width: 50%;
@@ -600,7 +602,7 @@ section.new-arrival {
 }
 
 .new-collection {
-    background-image: url('./assets/imgs/averie-woodard-F9OmRNNlnYA-unsplash.png');
+    background-image: url('./assets/imgs/averi.png');
     background-repeat: no-repeat;
     background-position: bottom center;
     width: 50%;
@@ -630,22 +632,29 @@ section.new-arrival {
 }
 
 .new-store-product button {
-    font-size: 13px;
-    letter-spacing: 0px;
-    color: #3a3a3a;
-    font-weight: 700;
-    font-family: 'Open Sans', sans-serif;
+
+
     background-color: #ffffff;
     width: 18.5%;
     cursor: pointer;
     padding: 13px 0 13px 0;
     border-style: none;
     margin-bottom: 217px;
+    cursor: pointer;
 
 }
 
+.new-store-product button a {
+
+    font-size: 13px;
+    letter-spacing: 0px;
+    color: #3a3a3a;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+}
+
 .arrow {
-    background-image: url('./assets/imgs/Layer\ 123\ copy\ 3.png');
+    background-image: url('./assets/imgs/arrow.png');
     background-repeat: no-repeat;
     background-position: 80% 53%;
 }
@@ -685,6 +694,7 @@ section.new-arrival {
 .card-details {
     display: flex;
     gap: 20px;
+    width: 100%;
 }
 
 .news-card-detail {
@@ -694,10 +704,10 @@ section.new-arrival {
 }
 
 .main-card {
-    width: 100%;
+    width: 33.33%;
 }
 
-.card-details p {
+.news-card-content {
     font-size: 18px;
     color: #111111;
     font-weight: 700;
@@ -705,29 +715,15 @@ section.new-arrival {
     padding: 32px 0 36px 0;
     text-align: center;
 }
-.news-img1 {
-    background-image: url('./assets/imgs/oleg-ivanov-4gr4VDpldbI-unsplash.png');
-    background-repeat: no-repeat;
-    background-position: left;
-    height: 228px;
+
+.news-img img {
+    height: 230px;
+    object-fit: cover;
+    object-fit: center center;
+    cursor: pointer;
 
 }
 
-.news-img2 {
-    background-image: url('./assets/imgs/oleg-ivanov-2EzVStz843Q-unsplash.png');
-    background-repeat: no-repeat;
-    background-position: left;
-    height: 228px;
-
-}
-
-.news-img3 {
-    background-image: url('./assets/imgs/brown-beg.png');
-    background-repeat: no-repeat;
-    background-position: left;
-    height: 228px;
-
-}
 
 .latest-card-bottom-part img {
     width: auto;
@@ -809,6 +805,7 @@ footer {
     color: #ffffff;
     font-weight: 700;
     font-family: 'Roboto Slab', serif;
+    padding-bottom: 25px;
 }
 
 .footer-para {
@@ -818,6 +815,11 @@ footer {
     color: #b6b6b6;
     font-weight: 400;
     font-family: 'Oxygen', sans-serif;
+    padding: 30px 0 30px 0;
+}
+
+.typography ul {
+    padding: 30px 0 0 0;
 }
 
 .typography ul li a {
@@ -843,6 +845,7 @@ footer {
     padding: 9px 0;
 
 }
+
 .social-media-icons ul li i {
     color: #afafaf;
 
